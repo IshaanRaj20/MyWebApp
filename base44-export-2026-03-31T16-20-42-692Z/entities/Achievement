@@ -1,0 +1,42 @@
+{
+  "name": "Achievement",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Name of the award, trophy, accomplishment, or project"
+    },
+    "description": {
+      "type": "string",
+      "description": "Details about this achievement"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "award",
+        "trophy",
+        "accomplishment",
+        "game"
+      ],
+      "default": "award",
+      "description": "Type of achievement"
+    },
+    "date_earned": {
+      "type": "string",
+      "format": "date",
+      "description": "When you earned this or built it"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "Photo of the award, trophy, or game screenshot"
+    },
+    "download_url": {
+      "type": "string",
+      "description": "Download link for a game"
+    }
+  },
+  "required": [
+    "title",
+    "category"
+  ]
+}
